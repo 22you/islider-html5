@@ -1,0 +1,183 @@
+.reg-btn {
+  text-align: center; }
+
+.reg-btn, .pro dt {
+  margin: 0 auto; }
+
+.item-1 {
+  background: #ff5252; }
+
+.item-2 {
+  background: #fff; }
+
+.item-3 {
+  background: #e7f6fe; }
+
+.item-4 {
+  background: #4ea1fd; }
+
+.reg-process {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  position: relative;
+  padding: 10% 0; }
+
+[class^="text"] {
+  font-size: 12px;
+  margin-bottom: 7%;
+  line-height: 25px; }
+
+.item-1 {
+  background-image: url("../img/itembg.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%; }
+  .item-1 .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; }
+  .item-1 p[class^="text"] {
+    color: #fff;
+    line-height: 24px; }
+  .item-1 .scene img {
+    width: 235px !important; }
+
+.item-2 .scene img {
+  width: 300px; }
+.item-2 p[class^="text"] {
+  color: #333333;
+  line-height: 25px; }
+
+.box {
+  height: 100%; }
+
+.mod_container {
+  padding: 20px 2%;
+  width: 96%;
+  margin: 0 auto;
+  height: 100%; }
+
+.item .sprite {
+  background-repeat: no-repeat;
+  -webkit-transform: translate3d(0, 200px, 0);
+  opacity: 0;
+  text-align: center; }
+
+.item.play .sprite {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0); }
+.item.play .text_2 {
+  -webkit-transition: all 1s 0.3s ease-out; }
+.item.play .text_1 {
+  -webkit-transition: all 1s ease-out; }
+  .item.play .text_1 img {
+    width: 300px; }
+.item.play .scene {
+  -webkit-transition: all 1s 0.6s ease-out; }
+  .item.play .scene img {
+    width: 300px; }
+
+.reg-btn {
+  width: 220px;
+  background: #ffce55;
+  border-radius: 21px;
+  padding: 10px 0;
+  font-size: 18px;
+  margin-top: 40px; }
+  .reg-btn a {
+    color: #666666; }
+
+.arrow-ri {
+  height: 15px;
+  width: 8px;
+  background-position: 0 0;
+  background: url("../img/spirit4.png") no-repeat;
+  background-size: 320px 61px;
+  margin-top: 50px;
+  -webkit-transform: rotate(180deg); }
+
+.arrow-down {
+  height: 15px;
+  width: 8px;
+  background-position: 0 0;
+  background: url("../img/spirit4.png") no-repeat;
+  background-size: 320px 61px;
+  margin-top: 50px;
+  -webkit-transform: rotate(270deg);
+  position: absolute;
+  top: 70px;
+  right: 38px; }
+
+.arrow-le {
+  height: 15px;
+  width: 8px;
+  background-position: 0 0;
+  background: url("../img/spirit4.png") no-repeat;
+  background-size: 320px 61px;
+  margin-top: 50px; }
+
+.pro {
+  flex-basis: 30%;
+  margin-top: 30px; }
+  .pro dt {
+    background: url("../img/spirit4.png") no-repeat;
+    background-size: 320px 61px;
+    width: 78px;
+    height: 91px; }
+  .pro dd {
+    font-size: 12px;
+    color: #fff;
+    margin-top: 10px; }
+  .pro .process1 {
+    height: 61px;
+    width: 58px;
+    background-position: -203px 0; }
+  .pro .process2 {
+    height: 61px;
+    width: 58px;
+    background-position: -261px 0; }
+  .pro .process3 {
+    height: 61px;
+    width: 58px;
+    background-position: -144px 0; }
+  .pro .process4 {
+    height: 61px;
+    width: 58px;
+    background-position: -27px 0; }
+  .pro .process5 {
+    height: 61px;
+    width: 58px;
+    background-position: -86px 0; }
+
+@-webkit-keyframes ScalingLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-100%, 100%) 6; }
+  100% {
+    opacity: 0.99;
+    -webkit-transform: translate(0, 0) scale(1); } }
+@-webkit-keyframes ScalingRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(100%, -100%) scale(6); }
+  100% {
+    opacity: 0.99;
+    -webkit-transform: translate(0, 0) scale(1); } }
+.downbtn li {
+  margin: 6% 0; }
+
+.appcode {
+  padding-bottom: 72px;
+  background: url(../img/shadow.png) no-repeat 95px 0;
+  background-size: 252px; }
+
+.no-title-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  height: 70%; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,270 @@
+@charset "UTF-8"; // 变量定义
+$basefont: 12px;
+$white: #fff;
+$yellow: #ffce55;
+$list: #ff5252 #fff #e7f6fe #4ea1fd;
+$grid-height: 10px;
+// 占位符
+%txt-center {
+    text-align: center;
+}
+
+%margin-center {
+    margin: 0 auto;
+}
+// 宏
+@mixin border-radius-btn {
+    border-radius: 21px;
+    padding: 10px 0;
+    font-size: 18px;
+
+    a {
+        color: #666666;
+    }
+    @extend %txt-center;
+    @extend %margin-center;
+}
+@mixin spirit4 {
+    background: url("../img/spirit4.png") no-repeat;
+    background-size: 320px 61px;
+}
+@mixin _10_03 {
+    height: 15px;
+    width: 8px;
+    background-position: 0 0;
+}
+@mixin _10_07 {
+    height: 23px;
+    width: 19px;
+    background-position: -8px 0;
+}
+@mixin process4 {
+    height: 61px;
+    width: 58px;
+    background-position: -27px 0;
+}
+@mixin process5 {
+    height: 61px;
+    width: 58px;
+    background-position: -86px 0;
+}
+@mixin process3 {
+    height: 61px;
+    width: 58px;
+    background-position: -144px 0;
+}
+@mixin process1 {
+    height: 61px;
+    width: 58px;
+    background-position: -203px 0;
+}
+@mixin process2 {
+    height: 61px;
+    width: 58px;
+    background-position: -261px 0;
+}
+@mixin arrow {
+     @include _10_03;
+    @include spirit4;
+    margin-top: $grid-height*5;
+}
+@mixin flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+@mixin flex-end {
+    justify-content: flex-end;
+}
+@mixin box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height:100%;
+}
+@mixin no-title-box{
+  @include box;
+
+}
+
+@for $i from 1 through 4 {
+    .item-#{$i} {
+        background: nth($list,$i);
+    }
+}
+
+.reg-process {
+    @include flex;
+    @include flex-end;
+    position: relative;
+    padding:10% 0;
+}
+
+[class^="text"] {
+    font-size: $basefont;
+    margin-bottom: 7%;
+    line-height: 25px;
+}
+
+.item-1 {
+    background-image: url("../img/itembg.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    .box{
+      @include box;
+    }
+
+    p[class^="text"] {
+        color: $white;
+        line-height: 24px;
+    }
+
+    .scene img {
+        width: 235px !important;
+    }
+}
+
+.item-2 {
+    .scene img {
+        width: 300px;
+    }
+
+    p[class^="text"] {
+        color: #333333;
+        line-height: 25px;
+    }
+}
+.box{
+  height:100%;
+}
+.mod_container {
+    padding: 20px 2%;
+    width: 96%;
+    margin: 0 auto;
+    height:100%;
+}
+
+.item {
+    .sprite {
+        background-repeat: no-repeat;
+        -webkit-transform: translate3d(0, 200px, 0);
+        opacity: 0;
+        text-align: center;
+    }
+}
+
+.item.play {
+    .sprite {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+
+    .text_2 {
+        -webkit-transition: all 1s 0.3s ease-out;
+    }
+
+    .text_1 {
+        -webkit-transition: all 1s ease-out;
+
+        img {
+            width: 300px;
+        }
+    }
+
+    .scene {
+        -webkit-transition: all 1s 0.6s ease-out;
+
+        img {
+            width: 300px;
+        }
+    }
+
+
+}
+
+
+.reg-btn {
+    width: 220px;
+    background: $yellow;
+    @include border-radius-btn;
+    margin-top: $grid-height*4;
+}
+
+.arrow-ri {
+    @include arrow;
+    -webkit-transform: rotate(180deg);
+}
+
+.arrow-down {
+    @include arrow;
+    -webkit-transform: rotate(270deg);
+    position: absolute;
+    top: $grid-height*7;
+    right: 38px ;
+}
+
+.arrow-le {
+    @include arrow;
+}
+
+.pro {
+    flex-basis: 30%;
+    margin-top: $grid-height*3;
+
+
+    dt {
+        @include spirit4;
+        width: 78px;
+        height: 91px;
+        @extend %margin-center;
+    }
+
+    dd {
+        font-size: $basefont;
+        color: $white;
+        margin-top: 10px;
+    }
+
+    .process1 {
+        @include process1;
+    }
+
+    .process2 {
+        @include process2;
+    }
+
+    .process3 {
+        @include process3;
+    }
+
+    .process4 {
+        @include process4;
+    }
+
+    .process5 {
+        @include process5;
+    }
+}
+@-webkit-keyframes ScalingLeft{
+    0%{opacity:0;-webkit-transform:translate(-100%,100%) (6);}
+    100%{opacity:0.99;-webkit-transform:translate(0,0)scale(1);}
+}
+
+@-webkit-keyframes ScalingRight{
+    0%{opacity:0;-webkit-transform:translate(100%,-100%) scale(6);}
+    100%{opacity:0.99;-webkit-transform:translate(0,0)scale(1);}
+}
+.downbtn{
+  li{
+    margin:6% 0;
+  }
+}
+.appcode {
+    padding-bottom: 72px;
+    background: url(../img/shadow.png) no-repeat 95px 0;
+    background-size: 252px;
+}
+.no-title-box{
+  @include no-title-box;
+  height:70%;
+}
